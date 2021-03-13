@@ -1,12 +1,12 @@
 import boto3
-s3 = boto3.resource('s3', aws_access_key_id='AKIA6H5ZMTKIGJISRMLP', aws_secret_access_key='OMIT')
+s3 = boto3.resource('s3', aws_access_key_id='AKIA6H5ZMTKILDBH3LO7', aws_secret_access_key='OMIT')
 # Commented out after first creation
 # s3.create_bucket(Bucket='datacont-dmh148', CreateBucketConfiguration={'LocationConstraint':'us-west-2'})
 s3.Object('datacont-dmh148', 'test.jpg').put(Body=open('./test.jpg', 'rb'))
 
 dyndb = boto3.resource('dynamodb',
 		region_name='us-west-2',
-		aws_access_key_id='AKIA6H5ZMTKIGJISRMLP',
+		aws_access_key_id='AKIA6H5ZMTKILDBH3LO7',
 		aws_secret_access_key='OMIT'
 	)
 
